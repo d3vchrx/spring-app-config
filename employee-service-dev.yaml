@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${DB_HOST:jdbc:mysql://localhost:3306/employeeservicedb}
+    username: ${DB_USER:root}
+    password: ${DB_PASSOWORD:password}
+    driver-class-name: ${DB_DRIVER:com.mysql.cj.jdbc.Driver}
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
