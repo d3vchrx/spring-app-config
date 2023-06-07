@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/employee/**
+        - id: contract-service
+          uri: lb://contract-service
+          predicates:
+            - Path=/contract/**
+            - Path=/benefit/**
+        - id: holiday-service
+          uri: lb://holiday-service
+          predicates:
+            - Path=/holiday/**
+            - Path=/permit/**
